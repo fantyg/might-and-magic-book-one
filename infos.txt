@@ -1,0 +1,50 @@
+///////////////////// FOUND INFOS \\\\\\\\\\\\\\\\\\\\\\
+
+------------------ SORPHIGAL - LVL 1 -------------------
+
+(10, 12) -  On this stone statue of a gnome robber a plaque reads...
+            One by water, one by land
+						One by air, and one by sand
+						The wheel of luck will favorably pay
+						The more of these mencing beasts you slay!
+						Although wishes may come true
+						All the beasts will become anew.
+
+(0, 9) -    On this stone statue of an elven wizard a plaque reads...
+            Seek the wizard Ranalou in his lair at the Korin Bluffs.
+						Six castles he will send you to
+						But doom will be quite tough!
+						Cruelty and kindness measured throughout
+						Jugement day is then sought out.
+
+(0, 6) -    On this stone statue of a gray minotaur a plaque reads...
+            This beast once roamed the Enchanted Forest and now rules a great
+						fortress there.
+						
+(2, 4) -    On this stone statue of a human cleric a plaque reads...
+            In honor of Gala...
+						For her brave attempt to work with the savages of the Volcanic Isles
+
+(0, 4) -    On this stone statue of a human knight a plaque reads...
+            Services rendered, secrets unfold
+						The brothers together lead to treasures untold
+						Five towns you must travel
+						For this quest to unravel
+
+(0, 2) -    On this stone statue of a blue dragon a plaque reads...
+						In memory of a time long ago...
+						Before the days when the towns moved underground, dragons
+						were few and far between.
+
+(7, 1) -    On this stone statue of an h-orc archer a plaque reads...
+            In honor of Corak...
+						For his mapping expedition of the Land of Varn and rediscovery
+						of the Lost Town of Dusk.
+						
+(11, 14) -	See man in cave below (1, 2).
+
+
+--------------------- SORPHIGAL - LVL -1 -----------------------------------
+
+(1, 2) -    Good! Take this scroll to the wizard Agar in Erliquin and you
+					  shall be rewarded.

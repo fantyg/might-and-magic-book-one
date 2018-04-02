@@ -1,0 +1,242 @@
+/////// LEGEND ////////
+│ - ┌ ┐ └ ┘├ ┤ ┬ ┴ ┼ ......	wall
+..., :: ................... fake wall
+/ /, // ................... unlocked door
+/-\, -/ ................... locked door
+/#\, #/ ................... traped door (locked on out)
+### ....................... trap
+@@@ ....................... no magic
+*** ....................... teleport
+III, II ...................	passsage in
+OOO, OO ................... passage out
+UUU, UU ................... passage up
+DDD, DD ................... passage down
+xx ........................ uknown field
+Tv ........................ tavern
+Sh ........................ shop
+In ........................ inn
+Bs ........................ blacksmith
+Fd ........................ food
+Tr ........................ training
+If ........................ info
+En ........................ encounters
+Tm ........................ temple
+
+////////////////////////// MAP PATTERN \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+  ┌---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┐
+15│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│15
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+14│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│14
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+13│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│13
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+12│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│12
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+11│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│11
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+10│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│10
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 9│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 9
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 8│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 8
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 7│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 7
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 6│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 6
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 5│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 5
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 4│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 4
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 3│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 3
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 2│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 2
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 1│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 1
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 0│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 0
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  └---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┘
+    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+		
+/////////////////////// Sorphigal - lvl 0 \\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////    C2 - (10, 10)  \\\\\\\\\\\\\\\\\\\\\\\\\
+
+    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+  ┌---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┐
+15│xxx│   / En│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│       │xxx│xxx│   │15
+  │xxx│   /   │xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│       │xxx│xxx│   │
+  ├---┘   ┌---┼---┼---┼---┼---┼---┼---┼   └---┼  Tv   ┼---┼---┼   ┤
+14│   #   │xxx│xxx│                   │       /       │xxx│xxx│   │14
+  │   /   │xxx│xxx│                   │       /       │xxx│xxx│   │
+  ├---┐   └---┼---┼   ┌---┼---┼---┐   │   ┌---┼---┼---┼---┼---┼   ┤
+13│xxx│   -   │xxx│   │   │   │   > En│   │xxx│xxx│xxx│xxx│xxx│   │13
+  │xxx│   /   │xxx│   │   │   │   >   │   │xxx│xxx│xxx│xxx│xxx│   │
+  ├---┘   ┌---┼---┼   ┼/#\┼   ┼/#\┼   │   └---┼---┼---┼---┼---┼   ┤
+12│   #   │xxx│xxx│   │     En    │   │     If│xxx│       │xxx│   │12
+  │   /   │xxx│xxx│   │           │   │       │xxx│       │xxx│   │
+  ├---┐   └---┼---┼   ┼---┼   ┼---┼   │   ┌---┼---┼  Tr   ┼---┼   ┤
+11│xxx│   -   │xxx│       │   │       │   │xxx│xxx│       │xxx│   │11
+  │xxx│   /   │xxx│       │   │       │   │xxx│xxx│       │xxx│   │
+  ├---┘   ----┼---┼vvv----┼/-\┼---┼---┘   └---┼---┼----/ /┼---┼   ┤
+10│                                                               │10
+  │                                                               │
+  ├   ┼---┼---┐   ┌---┼---┼/-\┼---┼---┐   ┌---┼---┐   ┌---┐   ┼---┤
+ 9│If │xxx│xxx│   │xxx│       │xxx│xxx-   -xxx│   -   │xxx│   │xxx│ 9
+  │   │xxx│xxx│   │xxx│     En│xxx│xxx/   /xxx│   /   │xxx│   │xxx│
+  ├---┼---┼---┼   ┼---┼       ┼---┼---┼---┼---┼---┼---┼---┼   ┼---┤
+ 8│xxx│xxx│xxx│   │xxx│###    │xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│ 8
+  │xxx│xxx│xxx│   │xxx│###    │xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│
+  ├---┼---┼---┼   ┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┤
+ 7│xxx│           │xxx│xxx│xxx│xxx│                           │xxx│ 7
+  │xxx│           │xxx│xxx│xxx│xxx│                           │xxx│
+  ├---┼   ┼---┼/-\┼---┼---┼---┼---┼   ┼---┼---┼---┼   ┼---┼   ┼---┤
+ 6│ If    │xxx│   │xxx│       │xxx│   │xxx│xxx│xxx│   │xxx│       │ 6
+  │       │xxx│   │xxx│       │xxx│   │xxx│xxx│xxx│   │xxx│       │
+  ├---┼   ┼---┼---┼---┼   Bs  ┼---┼   ┼---┼---┼---┼   ┼---┼   ----┤
+ 5│xxx│   │xxx│xxx│xxx│       /           / Fd│xxx│   │xxx│       │ 5
+  │xxx│   │xxx│xxx│xxx│       /           /   │xxx│   │xxx│       │
+  ├---┼   ┼---┼---┼---┼---┼---┼---┼/ /┼---┼---┼---┼   ┼---┼   ----┤
+ 4│ If      If│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│   │xxx│       │ 4
+  │           │xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│   │xxx│       │
+  ├---┼   ┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼---┼   ┼---┼---┼---┤
+ 3│xxx│   │xxx│xxx│   │xxx│xxx│    In     │xxx│xxx│   │xxx│xxx│xxx│ 3
+  │xxx│   │xxx│xxx│   │xxx│xxx│           │xxx│xxx│   │xxx│xxx│xxx│
+  ├---┼   ┼---┼---┼   ┼---┼---┼---┬---┬---┼---┼---┼   ┼---┼---┼---┤
+ 2│ If    │xxx│     Tm    │xxx│xxx│xxx│xxx│                       │ 2
+  │       │xxx│           │xxx│xxx│xxx│xxx│                       │
+	├---┼   ┼---┼---┼   ┼---┼---┼---┬---┬---┼   ┼---┼   ┼---┼---┼   ┤
+ 1│xxx│   │xxx│xxx│   │xxx│xxx│ If    │xxx│   │xxx│   │xxx│xxx│   │ 1
+  │xxx│   │xxx│xxx│   │xxx│xxx│       │xxx│   │xxx│   │xxx│xxx│   │
+	├---┼   ┼---┼---┼/ /┼---┼---┼       ┬---┼   ┼---┼   ┼---┼---┼   ┤
+ 0│En -                                       │xxx│   │xxx│DD    │ 0
+  │   /                                       │xxx│OOO│xxx│       │
+  └---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┘
+	  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+		
+///////////////////// Sorphigal - lvl -1 \\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////    C2 - (10, 10)  \\\\\\\\\\\\\\\\\\\\\\\\\
+
+    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+  ┌---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┐
+15│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│   │xxx│xxx│        En │15
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│   │xxx│xxx│           │
+  ├---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼   ┼---┼---┼   ┼---┼---┤
+14│               │xxx│   │xxx│xxx│               │xxx│   │xxx│xxx│14
+  │               │xxx│   │xxx│xxx│               │xxx│   │xxx│xxx│
+  ├---┼/ \┼---┼   ┼---┼   ┼---┼---┼---┼---┼   ┼---┼---┼   ┼---┼---┤
+13│           │   │xxx│           │xxx│xxx│   │xxx│xxx│           │13
+  │           │   │xxx│           │xxx│xxx│   │xxx│xxx│           │
+  ├    Ar     ┼   ┼---┼---┼---┼   ┼---┼---┼   ┼---┼---┼---┼---┼   ┤
+12│           │   │xxx│xxx│xxx│   │xxx│xxx│   │xxx│xxx│xxx│xxx│   │12
+  │           │   │xxx│xxx│xxx│   │xxx│xxx│   │xxx│xxx│xxx│xxx│   │
+  ├---┼/ \┼---┼   ┼---┼---┼---┼   ┼---┼---┼   ┼---┼---┼---┼---┼   ┤
+11│               │       │xxx│                       │xxx│       │11
+  │               │       │xxx│                       │xxx│       │
+  ├---┼/#\┼---┼   ┼       ┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼   ┤
+10│xxx│@En│xxx│   │       │xxx│xxx│                   │xxx│xxx│   │10
+  │xxx│@@@│xxx│   │       │xxx│xxx│                   │xxx│xxx│   │
+  ├---┼/-\┼---┼   ┼---┼/ \┼---┼---┼   ┼---┼/ \┼---┼   ┼---┼---┼   ┤
+ 9│       │xxx│               │xxx│   │       │xxx│               │ 9
+  │       │xxx│               │xxx│   │       │xxx│               │
+  ├---┼   ┼---┼---┼---┼---┼   ┼---┼   ┼       ┼---┼/-\┼---┼---┼/-\┤
+ 8│   │   │       │       │   │xxx│   │       │xxx│   │xxx│xxx│   │ 8
+  │   │   │       │       │   │xxx│   │       │xxx│   │xxx│xxx│   │
+  ├   ┼   ┼       ┼       ┼   ┼---┼   ┼---┼---┼---┼   ┼---┼---┼   ┤
+ 7│ En│   │       │       │   │xxx│           │xxx│           │   │ 7
+  │   │   │       │       │   │xxx│           │xxx│           │   │
+  ├/ \┼   ┼---┼/ \┼/ \┼---┼   ┼---┼/ \┼/ \┼/ \┼---┼---┼---┼   ┼   ┤
+ 6│                   │xxx│   │xxx│   │   │   │xxx│xxx│xxx│   │   │ 6
+  │                   │xxx│   │xxx│   │   │   │xxx│xxx│xxx│   │   │
+	├/ \┼/ \┼---┼---┼   ┼---┼   ┼---┼   ┼---┼---┼---┼---┼---┼   ┼   ┤
+ 5│   │   │xxx│xxx│   │xxx│   │xxx│                   │@En#   │   │ 5
+  │   │   │xxx│xxx│   │xxx│   │xxx│                   │@@@/   │   │
+	├---┼---┼---┼---┼   ┼---┼   ┼---┼---┼---┼---┼---┼---┼---┼   ┼   ┤
+ 4│xxx│xxx│xxx│xxx│                               │xxx│xxx│   │   │ 4
+  │xxx│xxx│xxx│xxx│                               │xxx│xxx│   │   │
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼   ┼   ┤
+ 3│       │xxx│xxx│xxx│   │   │   │xxx│xxx│xxx│   │xxx│xxx-   │   │ 3
+  │       │xxx│xxx│xxx│   │   │   │xxx│xxx│xxx│   │xxx│xxx/   │   │
+	├       ┼---┼---┼---┼/#\┼/#\┼/#\┼---┼---┼---┼   ┼---┼---┼   ┼   ┤
+ 2│    If -         En  En  En  En  En    │xxx│   │xxx│xxx│   │   │ 2
+  │       /                               │xxx│   │xxx│xxx│   │   │
+	├---┼---┼   ┼---┼---┼/#\┼/#\┼/#\┼---┼   ┼---┼   ┼---┼---┼   ┼   ┤
+ 1│xxx│xxx│   │xxx│xxx│   │   │   │xxx│   │xxx│       /       │   │ 1
+  │xxx│xxx│   │xxx│xxx│   │   │   │xxx│   │xxx│       /       │   │
+	├---┼---┼   ┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼---┼       ┼   ┤
+ 0│xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│               -     UU│***│ 0
+  │xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│               /       │***│
+  └---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┘
+    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+
+//////////////////////////////                  \\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////   C2 - (15, 11) \\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+  ┌---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┬---┐
+15│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│15
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+14│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│14
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+13│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│13
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+12│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│12
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+11│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│11
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+10│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│10
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┼---┤
+ 9│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│        xxx│xxx│xxx│xxx│xxx│ 9
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│        xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼---┼---┼---┼---┤
+ 8│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│ 8
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼---┼---┼---┼---┤
+ 7│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│ 7
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│
+  ├---┼---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼---┼---┼---┼---┤
+ 6│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│ 6
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼---┼---┼---┼---┤
+ 5│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│ 5
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼---┼---┼---┼---┤
+ 4│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│                xxx│xxx│xxx│ 4
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│                xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼---┼/ \┼---┼   ┼---┼---┼---┼---┤
+ 3│xxx│xxx│xxx│xxx│xxx│xxx│xxx│           │xxx│   │xxx│xxx│xxx│xxx│ 3
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│           │xxx│   │xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼   ┼---┼---┼---┼---┤
+ 2│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│   │xxx│xxx│xxx│xxx│ 2
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx│   │xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼/ \┼---┼---┼---┼---┤
+ 1│xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx En │xxx│xxx│xxx│xxx│ 1
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│xxx│   │xxx│xxx    │xxx│xxx│xxx│xxx│
+	├---┼---┼---┼---┼---┼---┼---┼---┼   ┼---┼---┼   ┼---┼---┼---┼---┤
+ 0│xxx│xxx│xxx│xxx│xxx│xxx│xxx│       │xxx│xxx│xxx│xxx│xxx│xxx│xxx│ 0
+  │xxx│xxx│xxx│xxx│xxx│xxx│xxx│OO     │xxx│xxx│xxx│xxx│xxx│xxx│xxx│
+  └---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┴---┘
+    0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
